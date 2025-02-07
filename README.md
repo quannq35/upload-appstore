@@ -10,7 +10,7 @@
     - Mac Development/ Mac App Distribution: Chứng chỉ dành cho MacOS App
     - Push Notification Certificate: Chứng chỉ gửi thông báo đây (APNs)
 
-# 2. Identifier(Da h tính ứng dụng)
+# 2. Identifier(Danh tính ứng dụng)
   Giúp định danh ứng dụng và các dịch vụ liên quan
   * Các loại Identifier quan trọng
     - App IDs(App Identifier): Dùng để định danh ứng dụng, có dạng com.company.appname
