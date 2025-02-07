@@ -1,7 +1,9 @@
 # upload-appstore
 
 # 1. Certificate(Chứng chỉ)
-  Là chứng chỉ số để xác thực danh tính của developer hoặc tổ chức khi phát triển và phân phối ứng dụng (Xác thực danh tính ứng dụng)
+  - Xác nhận ai là người phát triển ứng dụng.
+  - Cho phép ký số(code signing) ứng dụng để chạy trên thiết bị thật hoặc phát hành App Store
+  - Đảm bảo ứng dụng ko bị giả mạo hoặc chỉnh sửa sau khi được ký.
   * Các loại chứng chỉ phổ biến
     - Development certificate: Dùng để cài đặt và chạy ứng dụng trên thiết bị thật trong giai đoạn phát triển
     - Distribution certificate: Dùng để ký ứng dụng khi phát hành lên App Store hoặc TestFight
@@ -11,7 +13,8 @@
     - Push Notification Certificate: Chứng chỉ gửi thông báo đây (APNs)
 
 # 2. Identifier(Danh tính ứng dụng)
-  Giúp định danh ứng dụng và các dịch vụ liên quan
+  - Giúp định danh ứng dụng và các dịch vụ liên quan
+  - Được sử dụng để liên kết với Certificates, Provisioning Profiles, và Capabilities (Push Notifications, iCloud, In-App Purchases...)
   * Các loại Identifier quan trọng
     - App IDs(App Identifier): Dùng để định danh ứng dụng, có dạng com.company.appname
     - Bundle ID: Một định danh duy nhất của ứng dụng trong XCode(Phải khớp với App ID)
@@ -28,7 +31,9 @@
   - Mỗi năm có thể reset danh sách thiết bị
 
 # 4. Profiles(Cấu hình cấp phép)
-  - Provisioning profile là tệp cấu hình kết hợp giữa Certificate + AppID + Device để cấp quyền chạy ứng dụng trên thiết bị thật hoặc phát hành lên AppStore
+  - Xác định ứng dụng có thể chạy trên thiết bị nào
+  - Liên kết Certificate với Apple ID để đảm bảo app chỉ chạy với chứng chỉ hợp lệ
+  - Kích hoạt các quyền đặc biệt như Push Notification, iCloud, AppGroup..
   * Các loại Provisioning Profile
     - Development Profile: Dùng để chạy app trên thiết bị thật trong quá trình phát triển
     - Ad hoc Profile: Dùng để phân phối app ngoài AppStore cho một nhóm thiết bị nhất định
